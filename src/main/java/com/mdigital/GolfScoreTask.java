@@ -1,13 +1,32 @@
 package com.mdigital;
 
+import java.util.Scanner;
+
 public class GolfScoreTask {
     static void main() {
-        for (int strockes = 0; strockes < 10; strockes++) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("what mode would you like to use");
+        String mode = input.nextLine();
+        if (mode.toLowerCase().equals("test")) {
+            test();
+        } else {
+            System.out.println("Please enter what par is");
+            int par = input.nextInt();
+            System.out.println("Please enter what score you got");
+            int strokes = input.nextInt();
+            System.out.println(getScore(strokes, par));
+        }
+    }
+
+
+    public static void test() {
+        for (int strokes = 0; strokes < 10; strokes++) {
             for (int par = 0; par < 10; par++) {
                 System.out.println("-----------------------");
-                System.out.println("strokes = " + strockes);
+                System.out.println("strokes = " + strokes);
                 System.out.println("par = " + par);
-                System.out.println(getScore(strockes, par));
+                System.out.println(getScore(strokes, par));
                 System.out.println("------------------------");
             }
         }
