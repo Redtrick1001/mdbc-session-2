@@ -8,7 +8,7 @@ public class GolfScoreTask {
 
         System.out.println("what mode would you like to use");
         String mode = input.nextLine();
-        if (mode.toLowerCase().equals("test")) {
+        if (mode.equalsIgnoreCase("test")) {
             test();
         } else {
             System.out.println("Please enter what par is");
