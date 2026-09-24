@@ -17,6 +17,7 @@ public class GolfScoreTask {
             int strokes = input.nextInt();
             System.out.println(getScore(strokes, par));
         }
+        input.close();
     }
 
 
