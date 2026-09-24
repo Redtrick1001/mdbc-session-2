@@ -21,6 +21,17 @@ public class ForLoopStringTask {
             return "number need to be a number equal to or greater than 0";
         }
 
+        /*
+        This is done as it is more memory efficient. As each time you go though the loop it creates a new string because
+        string are immutable meaning that they can not be changed once they are created
+         */
+        // StringBuilder result = new StringBuilder();
+        // for (int i = 0; i < numOfTimes; i++) {
+        //   result.append(text);
+        // }
+        //
+        // return result.toString();
+
         String result = "";
         for (int i = 0; i < numOfTimes; i++) {
             result += text;
